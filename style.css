@@ -1,0 +1,148 @@
+@import "./styles/all-variables.css";
+
+body {
+  background-image: url(./images/matrix-2354492_1280.jpg);
+  font-family: var();
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header-brg {
+  background-color: var(--color-primary);
+  width: 4rem;
+  height: 4rem;
+  margin-top: 2.5rem;
+  margin-left: 1.2rem;
+}
+
+.header-brg {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--font-H);
+  font-size: 6rem;
+
+  color: var(--color-primary);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 3rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  font-family: var(--font-title);
+  color: var(--second-color);
+  display: block; /* chaque texte sur sa ligne */
+  margin-left: 2.7rem;
+}
+
+h2 {
+  color: var(--color-primary);
+
+  font-size: 4rem;
+  margin-left: 6rem;
+  margin-top: 0; /* supprime tout espace au-dessus */
+  margin-bottom: 0;
+}
+/* --------- cta ------------ */
+.cta-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  position: relative; /* pour pouvoir positionner les boutons à l’intérieur */
+}
+ /* --------- cta-groupe ------------ */
+ /* -----------cta-connection------- */
+.cta-container a {
+  text-decoration: none;
+  color: var(--second-color);
+  font-family: var(--font-title);
+  position: relative;
+  background: linear-gradient(#11998e, #38ef7d);
+  box-shadow: #11998e 0.3rem 0.3rem 0.6rem;
+  border: rgb(23, 229, 23) solid 0.25rem;
+  border-radius: 2rem;
+  font-size: 2.2rem;
+
+  margin-right: 1rem;
+  margin-top: 6.2rem;
+  width: 10rem;
+  height: 5rem;
+}
+/* --------- cta  connection------------ */
+.cta-container .cta-connect {
+  
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15rem; 
+
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 8rem;
+   text-align: center;
+  margin: 8rem; 
+  width: 12rem;
+  height: 8rem;
+}
+
+
+
+/* ----------------partner-------------------- */
+
+/* .cta-container button { */
+  /* background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  border: rgb(59, 194, 17) solid 0.12rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold; /* rend le texte du bouton plus visible */
+  /* box-shadow: 4rem; 
+} */
+
+
+.button {
+
+  border: rgb(59, 194, 17) solid 0.12rem; 
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  box-shadow: 4rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.btn-partner {
+  background: linear-gradient(#11998e, #38ef7d);
+  height: 5rem;
+  width: 5rem;
+}
+
+/* main{ 
+    margin-top: 20rem;
+    margin-right: 21rem;
+    display flex: ;
+    flex-direction: column;}*/
+
+footer {
+  color: #a0a0a0;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* text-decoration:none =enleve le souligne
+
+color:inherit  = enleve la couleur de base*/
