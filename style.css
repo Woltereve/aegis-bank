@@ -7,10 +7,21 @@ body {
   background-size: cover;
 }
 body {
-  height: 100vh;
-  width: 100vw;
-  max-height: 100vh;
-  max-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* --------- rend images et SVG responsive --- */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  position: relative;
 }
 /* ----------burger--------- */
 .header-burger__icon {
@@ -31,18 +42,17 @@ body {
   width: 2.4rem;
   height: 2.4rem;
   display: block;
-  margin-left: 6rem;
 }
 
-/* -----------------button--------------------  */
+/* -----------------button login----------  */
 
 .button-login {
-
+  position: absolute;
+  right: 1.2rem; /* same horizontal inset as burger */
+  top: 2.5rem; /* align with burger's margin-top */
   display: flex;
-  gap: 10rem;
-  margin-left: 20rem;
-  justify-content: space-around;
-  
+  gap: 1rem;
+  align-items: center;
 }
 
 /* ----------titre---------- */
@@ -50,9 +60,9 @@ h1 {
   text-align: center;
   font-family: var(--font-H);
   font-size: 6rem;
-
   color: var(--color-primary);
 }
+
 
 /* ---------------intro------------- */
 .intro {
@@ -78,6 +88,7 @@ h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 /* -----------cta-connection------- */
 .cta-container {
   display: flex;
@@ -167,6 +178,97 @@ h2 {
   display: inline-block;
 }
 
+
+@media (max-width: 768px) {
+  
+  body {
+    background-image: none;
+    background-color: #0b3b2e;
+  }
+
+  
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-burger__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-top: 0.8rem;
+    margin-left: 0.6rem;
+  }
+
+  .header-burger__icon svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  
+  .button-login {
+    position: static;
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+    padding-right: 1rem;
+  }
+
+  
+  h1 {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    text-align: center;
+  }
+
+  h2 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-left: 0;
+  }
+
+  p {
+    margin-left: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .card-container {
+    width: calc(100% - 2rem);
+    padding: 1.2rem 1rem;
+    margin: 1.6rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-burger__icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0.6rem;
+    margin-left: 0.6rem;
+  }
+
+  .header-burger__icon svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .button-login {
+    gap: 0.4rem;
+    padding-right: 0.6rem;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
+  }
+
+  .cta-container a,
+  .btn--style {
+    font-size: 1.6rem;
+    padding: 0.6rem;
+  }
+
+  .card-container p {
+    font-size: 1.6rem;
+  }
+}
+
 /* --------------card réduction---------- */
 .card-container {
   width: fit-content;
@@ -245,7 +347,7 @@ h2 {
 }
 
 .button {
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 0.8rem 1.5rem;
   font-weight: bold;
   box-shadow: 4rem;
@@ -258,7 +360,7 @@ h2 {
 .footer {
   color: #bebbbb;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   display: block;
   text-decoration: none;
